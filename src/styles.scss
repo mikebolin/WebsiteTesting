@@ -27,8 +27,6 @@
   @include custom-components-theme($anms-theme);
 }
 
-
-
 .black-theme {
   @include angular-material-theme($anms-black-theme);
   @include custom-components-theme($anms-black-theme);
