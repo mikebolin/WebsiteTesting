@@ -118,7 +118,7 @@ import { RtlSupportDirective } from './rtl-support/rtl-support.directive';
     MatSnackBarModule,
     MatSlideToggleModule,
     MatDividerModule,
-    FontAwesomeModule
+    FontAwesomeModule,
   ],
   declarations: [
     BigInputComponent,
