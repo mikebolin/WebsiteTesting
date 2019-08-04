@@ -49,7 +49,7 @@ import {
   ActionSettingsChangeLanguage,
   ActionSettingsChangeAnimationsPageDisabled
 } from './settings/settings.actions';
-
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 export {
   TitleService,
   selectAuth,
@@ -86,7 +86,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     // angular
     CommonModule,
     HttpClientModule,
-
+MatSnackBarModule
     // ngrx
     StoreModule.forRoot(reducers, { metaReducers }),
     StoreRouterConnectingModule.forRoot(),
