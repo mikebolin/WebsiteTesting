@@ -32,6 +32,12 @@ const reducer = createReducer(
   on(todoAction.actionTodosAdd, (state, todo) => ({
     ...state,
     items: [
+      {
+        id: todo.id,
+        name: todo.name,
+        done: false
+      },
+      ...state.items
     ]
   })),
   on(todoAction.actionTodosToggle, (state, todo) => ({
