@@ -27,7 +27,7 @@ export class ExamplesComponent implements OnInit {
       link: 'simple-state-management',
       label: 'STATE MANAGEMENT'
     },
-    { link: 'notifications', label: 'NO' }
+    { link: 'notifications', label: 'NOTIFICATIONS' }
   ];
 
   constructor(private store: Store<State>) {}
