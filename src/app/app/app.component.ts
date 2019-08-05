@@ -19,6 +19,8 @@ import {
   ActionSettingsChangeLanguage
 } from '../core/core.module';
 
+declare var require: any;
+
 @Component({
   selector: 'anms-root',
   templateUrl: './app.component.html',
@@ -30,7 +32,7 @@ export class AppComponent implements OnInit {
   envName = env.envName;
   version = env.versions.app;
   year = new Date().getFullYear();
-  //logo = require('../../assets/logo.png');
+  //logo = require('https://i.ibb.co/cr8pX7j/logo.png');
   languages = ['en', 'de', 'sk', 'fr', 'es', 'pt-br', 'zh-cn', 'he'];
   navigation = [
     { link: 'about', label: 'anms.menu.about' },
