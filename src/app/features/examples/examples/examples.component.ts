@@ -22,15 +22,12 @@ export class ExamplesComponent implements OnInit {
   examples = [
     { link: 'todos', label: 'anms.examples.menu.todos' },
     { link: 'stock-market', label: 'anms.examples.menu.stocks' },
-    { link: 'theming', label: 'anms.examples.menu.theming' },
     { link: 'crud', label: 'anms.examples.menu.crud' },
     {
       link: 'simple-state-management',
-      label: 'anms.examples.menu.simple-state-management'
+      label: 'State Management'
     },
-    { link: 'form', label: 'anms.examples.menu.form' },
-    { link: 'notifications', label: 'anms.examples.menu.notifications' },
-    { link: 'authenticated', label: 'anms.examples.menu.auth', auth: true }
+    { link: 'notifications', label: 'anms.examples.menu.notifications' }
   ];
 
   constructor(private store: Store<State>) {}
