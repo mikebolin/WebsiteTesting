@@ -86,7 +86,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     // angular
     CommonModule,
     HttpClientModule,
-MatSnackBarModule
+MatSnackBarModule,
     // ngrx
     StoreModule.forRoot(reducers, { metaReducers }),
     StoreRouterConnectingModule.forRoot(),
