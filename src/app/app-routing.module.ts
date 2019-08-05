@@ -17,6 +17,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./features/settings/settings.module').then(m => m.SettingsModule)
   },
+  
   {
     path: '**',
     redirectTo: 'about'
