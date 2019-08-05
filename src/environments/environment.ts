@@ -38,7 +38,6 @@ const packageJson = {
     "hammerjs": "^2.0.8",
     "rxjs": "~6.5.0",
     "tslib": "^1.9.0",
-    "uuid": "^3.3.2",
     "zone.js": "0.10.1"
   },
   "scripts": {
@@ -59,7 +58,6 @@ const packageJson = {
     "@types/jasmine": "~2.8.9",
     "@types/jasminewd2": "^2.0.5",
     "@types/node": "^10.14.14",
-    "@types/uuid": "^3.4.4",
     "all-contributors-cli": "^5.4.1",
     "codelyzer": "^5.0.0",
     "express": "^4.16.4",
