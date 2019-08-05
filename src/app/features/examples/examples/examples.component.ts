@@ -20,14 +20,14 @@ export class ExamplesComponent implements OnInit {
   isAuthenticated$: Observable<boolean>;
 
   examples = [
-    { link: 'todos', label: 'anms.examples.menu.todos' },
-    { link: 'stock-market', label: 'anms.examples.menu.stocks' },
-    { link: 'crud', label: 'anms.examples.menu.crud' },
+    { link: 'todos', label: 'TODOS' },
+    { link: 'stock-market', label: 'STOCKS' },
+    { link: 'crud', label: 'CRUD' },
     {
       link: 'simple-state-management',
-      label: 'State Management'
+      label: 'STATE MANAGEMENT'
     },
-    { link: 'notifications', label: 'anms.examples.menu.notifications' }
+    { link: 'notifications', label: 'NO' }
   ];
 
   constructor(private store: Store<State>) {}
