@@ -9,9 +9,6 @@
         <a mat-list-item href="" target="_blank">
           Github
         </a>
-                  <button mat-icon-button routerLink="settings" class="d-none d-sm-inline">
-            <fa-icon icon="cog"> </fa-icon>   Settings
-          </button>
       </mat-nav-list>
     </mat-sidenav>
 
@@ -46,9 +43,12 @@
             <fa-icon icon="user-circle"></fa-icon>
           </button>
           <mat-menu #toolbarUserMenu="matMenu">
+            
             <button mat-menu-item (click)="onLogoutClick()">
               <mat-icon><fa-icon icon="power-off"></fa-icon></mat-icon>
               <span>logout</span>
+
+         
             </button>
           </mat-menu>
 
