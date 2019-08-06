@@ -28,60 +28,58 @@
         </mat-card>
       </ng-container>
       <ng-container *ngIf="isEdit$ | async as isEdit">
-      <h2 *ngIf="!isEdit.value">{{'anms.examples.simple-state-management.form.add.title' | translate}}</h2>
-      <h2 *ngIf="isEdit.value">{{'anms.examples.simple-state-management.form.edit.title' | translate}}</h2>
+      <h2 *ngIf="!isEdit.value">
+        Add
+      </h2>
+      <h2 *ngIf="isEdit.value">Edit</h2>
       <form [formGroup]="userForm" #userFormRef="ngForm" (ngSubmit)="onSubmit(userFormRef)">
         <mat-form-field>
           <input
             matInput
             [placeholder]="
-              'anms.examples.simple-state-management.username' | translate
+              username
             "
             formControlName="username"
           />
           <mat-error *ngIf="userForm.get('username').hasError('minlength')">
-            {{'anms.examples.simple-state-management.validator.minlength' | translate:{minlength: userForm.get('username').errors.minlength.requiredLength} }}
+
           </mat-error>
           <mat-error *ngIf="userForm.get('username').hasError('required')">
-            {{'anms.examples.simple-state-management.validator.required' | translate}}
+
           </mat-error>
         </mat-form-field>
         <mat-form-field>
           <input
             matInput
             [placeholder]="
-              'anms.examples.simple-state-management.name' | translate
+              name
             "
             formControlName="name"
           />
           <mat-error *ngIf="userForm.get('username').hasError('minlength')">
-            {{'anms.examples.simple-state-management.validator.minlength' | translate:{minlength: userForm.get('username').errors.minlength.requiredLength} }}
           </mat-error>
           <mat-error *ngIf="userForm.get('username').hasError('required')">
-            {{'anms.examples.simple-state-management.validator.required' | translate}}
           </mat-error>
         </mat-form-field>
         <mat-form-field>
           <input
             matInput
             [placeholder]="
-              'anms.examples.simple-state-management.surname' | translate
+              surename
             "
             formControlName="surname"
           />
           <mat-error *ngIf="userForm.get('username').hasError('minlength')">
-            {{'anms.examples.simple-state-management.validator.minlength' | translate:{minlength: userForm.get('username').errors.minlength.requiredLength} }}
           </mat-error>
           <mat-error *ngIf="userForm.get('username').hasError('required')">
-            {{'anms.examples.simple-state-management.validator.required' | translate}}
           </mat-error>
         </mat-form-field>
         <div>
           <button *ngIf="!isEdit.value" type="submit" mat-raised-button color="primary">
-            {{'anms.examples.simple-state-management.form.add.submit' | translate}}
+            Add
           </button>
           <button *ngIf="isEdit.value" type="submit" mat-raised-button color="primary">
-            {{'anms.examples.simple-state-management.form.edit.submit' | translate}}
+           Edit
           </button>
           <button type="reset" mat-button color="warn">Reset</button>
         </div>
