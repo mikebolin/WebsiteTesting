@@ -58,6 +58,7 @@ const packageJson = {
     "@types/jasmine": "~2.8.9",
     "@types/jasminewd2": "^2.0.5",
     "@types/node": "^10.14.14",
+      "@types/moment-timezone": "^0.5.12",
     "all-contributors-cli": "^5.4.1",
     "codelyzer": "^5.0.0",
     "express": "^4.16.4",
