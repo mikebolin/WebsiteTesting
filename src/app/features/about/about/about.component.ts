@@ -4,7 +4,6 @@ import { ROUTE_ANIMATIONS_ELEMENTS } from '../../../core/core.module';
 import {FormControl} from '@angular/forms';
 import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
-import * as moment from 'moment-timezone';
 
 @Component({
   selector: 'anms-about',
@@ -32,9 +31,5 @@ export class AboutComponent implements OnInit {
 
   routeAnimationsElements = ROUTE_ANIMATIONS_ELEMENTS;
 
-formatDate(){
-    var d = new Date();
-    var myDatetimeString = moment(d).tz('America/Toronto').format('YYYY/MM/DD hh:mm:ss A');
-}
 
 }
