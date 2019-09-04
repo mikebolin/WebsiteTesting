@@ -23,7 +23,6 @@
 
 
 
-
           <span routerLink="" class="branding spacer center d-inline d-sm-none">
             <img [src]="" /></span>
           <span routerLink="" class="branding spacer center d-none d-sm-inline d-md-none"><img src="https://i.ibb.co/cr8pX7j/logo.png" /> Website</span>
@@ -31,6 +30,10 @@
 
           </span>
 
+
+          <button mat-icon-button routerLink="settings" class="d-none d-sm-inline">
+            <fa-icon icon="cog"></fa-icon>
+          </button>
 
 
           <button mat-button mat-stroked-button color="accent" *ngIf="!(isAuthenticated$ | async)" (click)="onLoginClick()">
