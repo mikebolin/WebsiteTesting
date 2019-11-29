@@ -10,7 +10,7 @@ import { AboutRoutingModule } from './about-routing.module';
 import {MatAutocompleteModule, MatInputModule} from '@angular/material';
 
 import { InvoiceGridGridComponent } from '../about/components/invoice-grid.component';
-import { MultiCheckFilterComponent } from './about/components/multicheck-filter.component';
+import { MultiCheckFilterComponent } from '../about/components/multicheck-filter.component';
 
 import { SearchAutoComponent } from './about/autocomplete/app-autocomplete';
 
