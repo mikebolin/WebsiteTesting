@@ -1,0 +1,17 @@
+<kendo-autocomplete
+  #storageAutoComplete
+  this.isDebounceSaveEnabled
+  [ngClass]="{
+    'primary m-1': isDebounceSaveEnabled === true,
+    'primary m-1 form-control required': isDebounceSaveEnabled === false
+  }"
+  style="width:340px"
+  [suggest]="true"
+  [filterable]="true"
+  [data]="listItems"
+  [placeholder]="thePlaceholder"
+  (valueChange)="valueChangeHandler()"
+  (filterChange)="filterChange($event)"
+  [(ngModel)]="textValue"
+>
+</kendo-autocomplete>

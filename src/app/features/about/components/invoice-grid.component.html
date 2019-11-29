@@ -1,0 +1,271 @@
+<kendo-grid
+  #invoiceGrid
+  id="popupstyle"
+  [data]="gridData"
+  [skip]="skip"
+  [pageSize]="pageSize"
+  [sortable]="{ allowUnsort: false }"
+  [height]="800"
+  [style.height.&]="100"
+  style="width:100%;"
+  [resizable]="true"
+  [rowHeight]="36"
+  scrollable="virtual"
+  [sort]="sort"
+  [filter]="filter"
+  (pageChange)="pageChange($event)"
+  (filterChange)="filterChange($event)"W
+  (sortChange)="sortChange($event)"
+  (pageChange)="pageChange($event)"
+  [columnMenu]="true"
+  filterable="menu"
+>
+<ng-template kendoGridToolbarTemplate>
+  <app-autocomplete
+    #searchBox
+    id="searchboxinput"
+    (updateNoteChanged)="linkSearch($event)"
+    [thePlaceholder]="'Search by any field'"
+    [cacheKey]="'GridSearch'"
+    [isDebounceSaveEnabled]="true"
+    isToLowerSaveValue="true"
+    [debounceTimeMS]="'2000'"
+    [minCharacterSaveLength]="'4'"
+    [minimumFilterLength]="'3'"
+  >
+  </app-autocomplete>
+
+  <button
+    id="excelExport"
+    type="button"
+    kendoGridExcelCommand
+    icon="file-excel"
+  >
+    Export
+  </button>
+</ng-template>
+
+
+  <kendo-grid-column
+    field="CustomerName"
+    title="CustomerName"
+    [width]="145"
+  >
+    <ng-template kendoGridCellTemplate let-dataItem>
+      {{ dataItem.CustomerName }}
+    </ng-template>
+  </kendo-grid-column>
+
+  <kendo-grid-column
+  field="CustomerOrder"
+  title="CustomerOrder"
+  [width]="145"
+>
+  <ng-template kendoGridCellTemplate let-dataItem>
+    {{ dataItem.CustomerOrder }}
+  </ng-template>
+</kendo-grid-column>
+
+
+
+<kendo-grid-column
+field="DaysLEFT"
+title="DaysLEFT"
+[width]="145"
+>
+<ng-template
+kendoGridFilterMenuTemplate
+let-column="column"
+let-filter="filter"
+let-filterService="filterService"
+>
+<multicheck-filter
+  [isPrimitive]="true"
+  [field]="column.field"
+  [filterService]="filterService"
+  [currentFilter]="filter"
+  [data]="distinctPrimitive(column.field)"
+></multicheck-filter>
+</ng-template>
+
+<ng-template kendoGridCellTemplate let-dataItem>
+  {{ dataItem.DaysLEFT }}
+</ng-template>
+</kendo-grid-column>
+
+
+
+<kendo-grid-column
+field="DeliveryDate"
+title="DeliveryDate"
+[width]="145"
+>
+<ng-template kendoGridCellTemplate let-dataItem>
+  {{ dataItem.DeliveryDate }}
+</ng-template>
+</kendo-grid-column>
+
+
+<kendo-grid-column
+field="EstimatedDelivery"
+title="EstimatedDelivery"
+[width]="145"
+>
+<ng-template kendoGridCellTemplate let-dataItem>
+  {{ dataItem.EstimatedDelivery }}
+</ng-template>
+</kendo-grid-column>
+
+
+<kendo-grid-column
+field="GUSQuotation"
+title="GUSQuotation"
+[width]="145"
+>
+<ng-template kendoGridCellTemplate let-dataItem>
+  {{ dataItem.GUSQuotation }}
+</ng-template>
+</kendo-grid-column>
+
+
+<kendo-grid-column
+field="GdeConfDate"
+title="GdeConfDate"
+[width]="145"
+>
+<ng-template kendoGridCellTemplate let-dataItem>
+  {{ dataItem.GdeConfDate }}
+</ng-template>
+</kendo-grid-column>
+
+
+<kendo-grid-column
+field="GdeConfirmation"
+title="GdeConfirmation"
+[width]="145"
+>
+<ng-template kendoGridCellTemplate let-dataItem>
+  {{ dataItem.GdeConfirmation }}
+</ng-template>
+</kendo-grid-column>
+
+
+
+<kendo-grid-column
+field="GusOrder"
+title="GusOrder"
+[width]="145"
+>
+<ng-template
+kendoGridFilterMenuTemplate
+let-column="column"
+let-filter="filter"
+let-filterService="filterService"
+>
+<multicheck-filter
+  [isPrimitive]="true"
+  [field]="column.field"
+  [filterService]="filterService"
+  [currentFilter]="filter"
+  [data]="distinctPrimitive(column.field)"
+></multicheck-filter>
+</ng-template>
+
+<ng-template kendoGridCellTemplate let-dataItem>
+  {{ dataItem.GusOrder }}
+</ng-template>
+</kendo-grid-column>
+
+
+
+<kendo-grid-column
+field="GusOrderDate"
+title="GusOrderDate"
+[width]="145"
+>
+<ng-template kendoGridCellTemplate let-dataItem>
+  {{ dataItem.GusOrderDate }}
+</ng-template>
+</kendo-grid-column>
+
+<kendo-grid-column
+field="InvoiceNumber"
+title="InvoiceNumber"
+[width]="145"
+>
+<ng-template kendoGridCellTemplate let-dataItem>
+  {{ dataItem.InvoiceNumber }}
+</ng-template>
+</kendo-grid-column>
+
+
+<kendo-grid-column
+field="Notes"
+title="Notes"
+[width]="145"
+>
+<ng-template kendoGridCellTemplate let-dataItem>
+  {{ dataItem.Notes }}
+</ng-template>
+</kendo-grid-column>
+
+
+<kendo-grid-column
+field="OrderAmmout"
+title="OrderAmmout"
+[width]="145"
+>
+<ng-template kendoGridCellTemplate let-dataItem>
+  {{ dataItem.OrderAmmout }}
+</ng-template>
+</kendo-grid-column>
+
+<kendo-grid-column
+field="OrderDate"
+title="OrderDate"
+[width]="145"
+>
+<ng-template kendoGridCellTemplate let-dataItem>
+  {{ dataItem.OrderDate }}
+</ng-template>
+</kendo-grid-column>
+
+
+
+<kendo-grid-column
+field="QuoteDate"
+title="QuoteDate"
+[width]="145"
+>
+<ng-template kendoGridCellTemplate let-dataItem>
+  {{ dataItem.QuoteDate }}
+</ng-template>
+</kendo-grid-column>
+
+<kendo-grid-column
+field="QuotedAmmount"
+title="QuotedAmmount"
+[width]="145"
+>
+<ng-template kendoGridCellTemplate let-dataItem>
+  {{ dataItem.QuotedAmmount }}
+</ng-template>
+</kendo-grid-column>
+
+<kendo-grid-column
+field="ServiceOrders"
+title="ServiceOrders"
+[width]="145"
+>
+<ng-template kendoGridCellTemplate let-dataItem>
+  {{ dataItem.ServiceOrders }}
+</ng-template>
+</kendo-grid-column>
+
+
+  <kendo-grid-excel
+    id="excelgrid"
+    fileName="Activity.xlsx"
+    [fetchData]="allData"
+  ></kendo-grid-excel>
+</kendo-grid>

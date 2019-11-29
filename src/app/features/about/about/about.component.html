@@ -1,9 +1,6 @@
 <div class="background">
     <div class="gradient">
       <div class="container">
-  		  <a mat-raised-button class="actions-main"  routerLink="../examples">
-            Examples
-          </a>
           <br><br>
         <style>
           .k-dialog{
@@ -14,14 +11,16 @@
     background-color: #7b7476 !important;
   }
           </style>
-          <div class="example-wrapper">
 
-          </div>
-        <br><br><br><br><br><br>
-        <br><br><br><br><br><br>
-        <br><br><br><br><br><br>
-        <br><br><br><br><br><br>
-        <br><br><br><br><br><br>
+<div class='row'>
+
+  <div class="col-12">
+    <app-invoice-grid
+    #activityGrid
+    [theRecords]="items"
+    ></app-invoice-grid>
+  </div>
+</div>
       </div>
     </div>
   </div>
